@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #0778a5; /* Fondo oscuro para contraste */
   color: white;
 }
@@ -10,10 +10,10 @@ body {
 /* Wrapper que da el margin lateral (como una isla centrada) */
 .header-wrapper {
   position: fixed;
-  top: 20px;           /* Distancia desde arriba */
+  top: 20px; /* Distancia desde arriba */
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;          /* Ancho máximo */
+  width: 100%; /* Ancho máximo */
   padding-left: 20px;
   padding-right: 20px;
   /*
@@ -31,31 +31,26 @@ body {
   padding: 20px 40px;
   background-color: #1e1e1e;
   color: white;
-  border-radius: 16px;           /* Bordes redondos */
-  margin: 0 auto;                /* Centrado dentro del wrapper */
-  
-  
+  border-radius: 16px; /* Bordes redondos */
+  margin: 0 auto; /* Centrado dentro del wrapper */
+
   border: 1px solid rgba(255, 255, 255, 0.1);
-  
+
   /* Permite que los enlaces sean clicables */
   pointer-events: auto;
-  
+
   /* Animación suave */
   transition: all 0.3s ease;
 }
-/*
 
-----Efecto hover: sube un poco la isla---- 
-
-.header:hover {
-  transform: scale3d(1.01, 1.01, 1) translateZ(0);
+.logo > img {
+  height: 70px;
+  width: auto;
 }
-*/
 
-.header > h1 {
-  margin: 0;
-  font-size: 1.5em;
-  font-weight: 600;
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 .header nav {
@@ -64,10 +59,10 @@ body {
 }
 
 .header nav a {
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-decoration: none;
   color: white;
-  font-weight: 500;
+  font-weight: 750;
   transition: color 0.3s ease;
 }
 
@@ -75,10 +70,6 @@ body {
   color: #00aaff;
 }
 
-/* Añade padding-top al contenido principal para que no quede debajo */
-main, .container, body > *:not(.header-wrapper) {
-  padding-top: 100px; /* Ajusta según la altura del header */
-}
 
 /* Responsive: en móvil se hace más pequeño */
 @media (max-width: 768px) {
@@ -88,19 +79,27 @@ main, .container, body > *:not(.header-wrapper) {
     gap: 15px;
     border-radius: 12px;
   }
-  
+
   .header-wrapper {
     top: 10px;
     width: 95%;
   }
-  
+
   .header > h1 {
     font-size: 1.3em;
   }
 }
 
+/*
 
-/* From Uiverse.io by Admin12121 */ 
+----Efecto hover: sube un poco la isla---- 
+
+.header:hover {
+  transform: scale3d(1.01, 1.01, 1) translateZ(0);
+}
+*/
+
+/* From Uiverse.io by Admin12121 */
 .body {
   --radius: 8px;
   --border: 4px;
@@ -109,8 +108,6 @@ main, .container, body > *:not(.header-wrapper) {
   display: grid;
   place-items: center;
   align-content: center;
-  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
-    Helvetica, Arial, sans-serif, system-ui;
 }
 
 .tabs {
@@ -197,6 +194,7 @@ main, .container, body > *:not(.header-wrapper) {
   transition: background, color;
   transition-duration: 0.25s;
   transition-timing-function: var(--ease, ease);
+  font-weight: 550;
 }
 
 .input:not(:checked) + .label:hover {
