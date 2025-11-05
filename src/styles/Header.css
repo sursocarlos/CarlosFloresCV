@@ -16,9 +16,6 @@ body {
   width: 100%; /* Ancho máximo */
   padding-left: 20px;
   padding-right: 20px;
-  /*
-  max-width: 2000px;
-  */
   z-index: 1000;
   pointer-events: none; /* Permite clicar debajo */
 }

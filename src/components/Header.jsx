@@ -7,7 +7,7 @@ function Header() {
     <div className="header-wrapper">
       <header className="header">
         <div className="logo">
-          <img src={logo} alt="aa" />
+          <img src={logo} alt="logo" />
         </div>
         <nav>
           <a href="#inicio">Inicio</a>

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Header from "./components/Header";
-import Sobre_mi from './components/Sobre_mi';
+import Body from './components/Body';
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <Header/>
-      <Sobre_mi/>
+      <Body/>
     </div>
   )
 }
