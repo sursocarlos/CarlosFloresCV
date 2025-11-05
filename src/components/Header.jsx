@@ -3,11 +3,14 @@ import "../styles/Header.css";
 
 function Header() {
   return (
+    <div className="header-wrapper"> 
     <header className="header">
       <h1>Carlos Flores</h1>
       <nav>
+        <a href="#inicio">Inicio</a>
         <a href="#sobre-mi">Sobre mí</a>
-        <a href="#proyectos">Proyectos</a>
+        <a href="#experiencia">Habilidades</a>
+        <a href="#certificaciones">Certificaciones</a>
         <a href="#contacto">Contacto</a>
       </nav>
 
@@ -37,6 +40,7 @@ function Header() {
         </div>
       </div>
     </header>
+    </div>
   );
 }
 
