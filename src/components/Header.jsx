@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/Header.css";
 import logo from "../assets/logo3.png";
+import { LanguageContext } from "../context/LanguageContext";
 
 function Header() {
+  const { lang, toggleLang } = useContext(LanguageContext);
+
   return (
     <div className="header-wrapper">
       <header className="header">
@@ -11,31 +14,34 @@ function Header() {
         </div>
 
         <nav>
-          <a href="#inicio">Inicio</a>
-          <a href="#sobre-mi">Sobre mí</a>
-          <a href="#experiencia">Habilidades</a>
-          <a href="#certificaciones">Certificaciones</a>
-          <a href="#contacto">Contacto</a>
+          <a href="#inicio">{lang === "es" ? "Inicio" : "Home"}</a>
+          <a href="#sobre-mi">{lang === "es" ? "Sobre mí" : "About Me"}</a>
+          <a href="#experiencia">{lang === "es" ? "Habilidades" : "Skills"}</a>
+          <a href="#certificaciones">{lang === "es" ? "Certificaciones" : "Certifications"}</a>
+          <a href="#contacto">{lang === "es" ? "Contacto" : "Contact"}</a>
         </nav>
 
         <div className="lang-switch">
           <div className="tabs">
             <input
-              defaultChecked
+              type="radio"
               name="lang"
               id="es"
-              type="radio"
               className="input"
+              checked={lang === "es"}
+              onChange={() => toggleLang()}
             />
             <label htmlFor="es" className="label">
               Español
             </label>
 
             <input
+              type="radio"
               name="lang"
               id="en"
-              type="radio"
               className="input"
+              checked={lang === "en"}
+              onChange={() => toggleLang()}
             />
             <label htmlFor="en" className="label">
               English
