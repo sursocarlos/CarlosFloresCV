@@ -1,77 +1,106 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .Body {
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  /* height: 100vh;*/ /* ocupa el 100% de la altura de la ventana */
-  display: flex;
-  background-color: #0778a5;
+  background: radial-gradient(circle at 10% 10%, #0f141a, #0a0c10 80%);
+  color: #d6d6d6;
+  padding-top: 140px;
 }
 
+/* ===== SOBRE MI ===== */
 .containerReal {
-  
-  /*TENEMOS 2 OPCIONES PARA ALINEAR EL ELEMENTO*/
-
-  /*OPCIÓN 1:*/
-  margin-top: 130px;
-  flex: 1;
-  
-  /*OPCIÓN 2:
-  padding-top: 150px;
-  padding-bottom: 50px;
-  max-height: 1000px; --Altura--
-  */
-
-  width: 100%; /* asegura que se estire a todo el ancho */
-  max-height: 500px; /* ALTURA DEL ELEMENTO */
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
-  text-align: justify;
+  padding: 60px 40px;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.container {
-  /*flex: 1;*/
-  width: 100%; /* asegura que se estire a todo el ancho */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  border: 1px solid black;
-}
-
-.containerReal > img {
-  height: 400px;
+.containerReal img {
+  height: 350px;
   width: auto;
-  padding-left: 30px;
-  padding-right: 30px;
-  border-radius: 1000px;
+  border-radius: 100%;
+  border: 3px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  filter: grayscale(20%);
+  transition: 0.4s;
 }
 
-.containerReal > img {
-  filter: grayscale(0%); /* blanco y negro */
-  transition: filter 0.3s ease;
-}
-
-.containerReal > img:hover {
-  filter: grayscale(100%); /* vuelve al color al pasar el ratón */
+.containerReal img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
 }
 
 .sobreMi {
-  width: 900px;
+  max-width: 700px;
+  text-align: justify;
 }
 
-.sobreMi > h2 {
-  font-size: 30px;
+.sobreMi h2 {
+  font-size: 2rem;
+  color: #00ffff;
+  margin-bottom: 1rem;
 }
 
-.sobreMi > p {
-  font-size: 20px;
+.sobreMi p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ===== PROYECTOS ===== */
+.container {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.projects h2 {
+  color: #00ffff;
+  margin-bottom: 1.5rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #12161d;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #00ffff;
+  color: #fff;
+}
+
+/* ===== CONTACTO ===== */
+.contact h2 {
+  color: #00ffff;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  font-size: 1.2rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .sobreMi h2 {
+    text-align: center;
+  }
+  .sobreMi p {
+    text-align: left;
+  }
 }

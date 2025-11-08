@@ -9,6 +9,7 @@ function Header() {
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
+
         <nav>
           <a href="#inicio">Inicio</a>
           <a href="#sobre-mi">Sobre mí</a>
@@ -17,28 +18,27 @@ function Header() {
           <a href="#contacto">Contacto</a>
         </nav>
 
-        <div className="body">
+        <div className="lang-switch">
           <div className="tabs">
             <input
               defaultChecked
-              defaultValue="HTML"
-              name="fav_language"
-              id="html"
+              name="lang"
+              id="es"
               type="radio"
               className="input"
             />
-            <label htmlFor="html" className="label">
+            <label htmlFor="es" className="label">
               Español
             </label>
+
             <input
-              defaultValue="JavaScript"
-              name="fav_language"
-              id="javascript"
+              name="lang"
+              id="en"
               type="radio"
               className="input"
             />
-            <label htmlFor="javascript" className="label">
-              Ingles
+            <label htmlFor="en" className="label">
+              English
             </label>
           </div>
         </div>

@@ -1,220 +1,117 @@
-/* Fondo del body para ver el efecto isla */
+/* ===== RESET ===== */
 body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #0778a5; /* Fondo oscuro para contraste */
-  color: white;
+  background: radial-gradient(circle at top left, #0a0a0f, #0f1116 70%);
+  color: #e0e0e0;
 }
 
-/* Wrapper que da el margin lateral (como una isla centrada) */
+/* ===== WRAPPER ===== */
 .header-wrapper {
   position: fixed;
-  top: 20px; /* Distancia desde arriba */
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%; /* Ancho máximo */
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 90%;
   z-index: 1000;
-  pointer-events: none; /* Permite clicar debajo */
 }
 
-/* El header real: isla flotante */
+/* ===== HEADER ===== */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background-color: #1e1e1e;
-  color: white;
-  border-radius: 16px; /* Bordes redondos */
-  margin: 0 auto; /* Centrado dentro del wrapper */
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-
-  /* Permite que los enlaces sean clicables */
-  pointer-events: auto;
-
-  /* Animación suave */
+  padding: 18px 36px;
+  background: rgba(20, 22, 30, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
   transition: all 0.3s ease;
 }
 
-.logo > img {
-  height: 70px;
+.logo img {
+  height: 60px;
   width: auto;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
+  filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.3));
 }
 
 .header nav {
   display: flex;
-  gap: 2em;
+  gap: 1.8em;
 }
 
 .header nav a {
-  font-size: 1.3em;
   text-decoration: none;
-  color: white;
-  font-weight: 750;
-  transition: color 0.3s ease;
+  color: #e0e0e0;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.header nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #00ffff;
+  transition: 0.3s;
 }
 
 .header nav a:hover {
-  color: #00aaff;
+  color: #00ffff;
 }
 
+.header nav a:hover::after {
+  width: 100%;
+}
 
-/* Responsive: en móvil se hace más pequeño */
+/* ===== LANGUAGE SWITCH ===== */
+.lang-switch {
+  display: grid;
+  place-items: center;
+}
+
+.tabs {
+  display: grid;
+  grid-auto-flow: column;
+  background: #0f141a;
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.input {
+  display: none;
+}
+
+.label {
+  padding: 6px 14px;
+  color: #ccc;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input:checked + .label {
+  background: #00ffff;
+  color: #000;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
-    padding: 15px 20px;
     gap: 15px;
-    border-radius: 12px;
+    padding: 15px 20px;
   }
 
-  .header-wrapper {
-    top: 10px;
-    width: 95%;
+  .header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
-
-  .header > h1 {
-    font-size: 1.3em;
-  }
-}
-
-/*
-
-----Efecto hover: sube un poco la isla---- 
-
-.header:hover {
-  transform: scale3d(1.01, 1.01, 1) translateZ(0);
-}
-*/
-
-/* From Uiverse.io by Admin12121 */
-.body {
-  --radius: 8px;
-  --border: 4px;
-  --height: 48px;
-  --speed: 0.25s;
-  display: grid;
-  place-items: center;
-  align-content: center;
-}
-
-.tabs {
-  height: var(--height);
-  display: grid;
-  grid-auto-flow: column;
-  background: hsl(0 0% 0%);
-  border-radius: var(--radius);
-  grid-auto-columns: 1fr;
-  position: relative;
-  border: var(--border) solid hsl(0 0% 0%);
-}
-
-.tabs {
-  --ease: linear(
-    0,
-    0.1641 3.52%,
-    0.311 7.18%,
-    0.4413 10.99%,
-    0.5553 14.96%,
-    0.6539 19.12%,
-    0.738 23.5%,
-    0.8086 28.15%,
-    0.8662 33.12%,
-    0.9078 37.92%,
-    0.9405 43.12%,
-    0.965 48.84%,
-    0.9821 55.28%,
-    0.992 61.97%,
-    0.9976 70.09%,
-    1
-  );
-}
-
-.tabs > .input,
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.tabs:has(:checked:nth-of-type(1)) {
-  --active: 0;
-}
-.tabs:has(:checked:nth-of-type(2)) {
-  --active: 1;
-}
-.tabs:has(:checked:nth-of-type(3)) {
-  --active: 2;
-}
-.tabs:has(:checked:nth-of-type(4)) {
-  --active: 3;
-}
-
-.tabs :checked + .label {
-  --highlight: 1;
-}
-
-.tabs:has(.input:nth-of-type(2)) {
-  --count: 2;
-}
-.tabs:has(.input:nth-of-type(3)) {
-  --count: 3;
-}
-.tabs:has(.input:nth-of-type(4)) {
-  --count: 4;
-}
-
-.tabs .label {
-  padding: 0 clamp(10px, 10px + 10px, 20px);
-  cursor: pointer;
-  text-align: center;
-  height: 100%;
-  display: grid;
-  border-radius: calc(var(--radius) - var(--border));
-  place-items: center;
-  color: hsl(0 0% 100% / calc(0.5 + var(--highlight, 0)));
-  transition: background, color;
-  transition-duration: 0.25s;
-  transition-timing-function: var(--ease, ease);
-  font-weight: 550;
-}
-
-.input:not(:checked) + .label:hover {
-  --highlight: 0.35;
-  background: hsl(0 0% 20%);
-}
-
-.tabs::after {
-  pointer-events: none;
-  content: "";
-  width: calc(100% / var(--count));
-  height: 100%;
-  background: hsl(0 0% 100%);
-  position: absolute;
-  border-radius: calc(var(--radius) - var(--border));
-  mix-blend-mode: difference;
-  translate: calc(var(--active, 0) * 100%) 0;
-  transition: translate, outline-color;
-  transition-duration: var(--speed);
-  transition-timing-function: var(--ease, ease);
-  outline: 2px solid transparent;
-}
-
-.tabs:has(:focus-visible)::after {
-  outline-color: red;
 }
