@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "../styles/Body.css";
-import carlos from "../assets/carlos.jpg";
+import carlos from "../assets/carlos.png";
 import { LanguageContext } from "../context/LanguageContext";
 
 function Body() {
@@ -9,7 +9,7 @@ function Body() {
   return (
     <section className="Body">
       <div className="containerReal" id="sobre-mi">
-        <img src={carlos} alt="carlitos" />
+        <img src={carlos} alt="carlos" />
         <div className="sobreMi">
           <h2>{lang === "es" ? "Sobre mí" : "About Me"}</h2>
           <p>
