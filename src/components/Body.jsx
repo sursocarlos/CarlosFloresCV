@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import "../styles/Body.css";
 import carlos from "../assets/carlos.png";
 import ug21logo from "../assets/ug21logo.png";
-import ayesalogo from "../assets/ayesalogo.jpg";
+import ayesalogo from "../assets/ayesalogo.png";
+import grupoacercalogo from "../assets/grupoacercalogo.png";
 import { LanguageContext } from "../context/LanguageContext";
 
 function Body() {
@@ -47,36 +48,64 @@ function Body() {
             </div>
             <h3>
               {lang === "es"
-                ? "Administración de Sistemas"
-                : "Systems Administration"}
+                ? "Administrador de Sistemas y Redes"
+                : "Systems and Networks Administrator"}
             </h3>
             <p>
               {lang === "es"
-                ? "Gestión de servidores de dominio, mantenimiento de VPN y servicios en red (DNS, DHCP, TCP/IP)."
-                : "Management of domain servers, VPN maintenance, and network services (DNS, DHCP, TCP/IP)."}
+                ? "Gestión de servidores de dominio, administración de NAS, mantenimiento de VPN, servicios en red (DNS, DHCP, TCP/IP), administración de Microsoft 365."
+                : "Domain server management, NAS administration, VPN maintenance, network services (DNS, DHCP, TCP/IP), and Microsoft 365 administration."}
             </p>
+            <span className="duration">
+              {lang === "es"
+                ? "Marzo 2024 - Octubre 2025"
+                : "March 2024 - October 2025"}
+              <span className="months">
+                {lang === "es" ? "1 año 8 meses" : "1 year 8 months"}
+              </span>
+            </span>
           </div>
           <div className="experience-item">
             <div className="company-logo">
               <img src={ayesalogo} alt="empresa" />
             </div>
-            <h3>{lang === "es" ? "Desarrollo Web" : "Web Development"}</h3>
+            <h3>
+              {lang === "es"
+                ? "Desarrollador Web Salesforce en prácticas"
+                : "Salesforce Web Developer Intern"}
+            </h3>
             <p>
               {lang === "es"
-                ? "Desarrollo en Java, JavaScript, HTML, CSS, SQL, React y Salesforce."
-                : "Development in Java, JavaScript, HTML, CSS, SQL, React, and Salesforce."}
+                ? "Desarrollo en Java, JavaScript, HTML, CSS, SQL, Apex y Salesforce."
+                : "Development in Java, JavaScript, HTML, CSS, SQL, Apex, and Salesforce."}
             </p>
+            <span className="duration">
+              {lang === "es"
+                ? "Marzo 2025 - Junio 2025"
+                : "March 2025 - June 2025"}
+              <span className="months">
+                {lang === "es" ? "3 meses" : "3 months"}
+              </span>
+            </span>
           </div>
           <div className="experience-item">
             <div className="company-logo">
-              <img src={ug21logo} alt="empresa" />
+              <img src={grupoacercalogo} alt="empresa" />
             </div>
             <h3>{lang === "es" ? "Soporte IT" : "IT Support"}</h3>
             <p>
               {lang === "es"
-                ? "Montaje, configuración y reparación de equipos, resolución de incidencias."
-                : "Setup, configuration, and repair of devices, troubleshooting issues."}
+                ? "Marketing, atención al cliente y telemarketing"
+                : "Marketing, customer service, and telemarketing"}
             </p>
+            <span className="duration">
+              {lang === "es"
+                ? "Junio 2023 - Agosto 2023"
+                : "June 2023 - August 2023"}
+              <span className="months">
+                {lang === "es" ? "3 meses" : "3 months"}
+              </span>
+            </span>
           </div>
         </div>
       </div>
