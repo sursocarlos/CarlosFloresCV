@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import "../styles/Body.css";
 import carlos from "../assets/carlos.png";
+import ug21logo from "../assets/ug21logo.png";
+import ayesalogo from "../assets/ayesalogo.jpg";
 import { LanguageContext } from "../context/LanguageContext";
 
 function Body() {
@@ -35,12 +37,62 @@ function Body() {
         </div>
       </div>
 
+      {/* Experiencia */}
+      <div className="container experience" id="experiencia">
+        <h2>{lang === "es" ? "Experiencia" : "Experience"}</h2>
+        <div className="experience-list">
+          <div className="experience-item">
+            <div className="company-logo">
+              <img src={ug21logo} alt="empresa" />
+            </div>
+            <h3>
+              {lang === "es"
+                ? "Administración de Sistemas"
+                : "Systems Administration"}
+            </h3>
+            <p>
+              {lang === "es"
+                ? "Gestión de servidores de dominio, mantenimiento de VPN y servicios en red (DNS, DHCP, TCP/IP)."
+                : "Management of domain servers, VPN maintenance, and network services (DNS, DHCP, TCP/IP)."}
+            </p>
+          </div>
+          <div className="experience-item">
+            <div className="company-logo">
+              <img src={ayesalogo} alt="empresa" />
+            </div>
+            <h3>{lang === "es" ? "Desarrollo Web" : "Web Development"}</h3>
+            <p>
+              {lang === "es"
+                ? "Desarrollo en Java, JavaScript, HTML, CSS, SQL, React y Salesforce."
+                : "Development in Java, JavaScript, HTML, CSS, SQL, React, and Salesforce."}
+            </p>
+          </div>
+          <div className="experience-item">
+            <div className="company-logo">
+              <img src={ug21logo} alt="empresa" />
+            </div>
+            <h3>{lang === "es" ? "Soporte IT" : "IT Support"}</h3>
+            <p>
+              {lang === "es"
+                ? "Montaje, configuración y reparación de equipos, resolución de incidencias."
+                : "Setup, configuration, and repair of devices, troubleshooting issues."}
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="container projects" id="proyectos">
         <h2>{lang === "es" ? "Proyectos" : "Projects"}</h2>
         <div className="cards">
-          <div className="card">{lang === "es" ? "Proyecto 1" : "Project 1"}</div>
-          <div className="card">{lang === "es" ? "Proyecto 2" : "Project 2"}</div>
-          <div className="card">{lang === "es" ? "Proyecto 3" : "Project 3"}</div>
+          <div className="card">
+            {lang === "es" ? "Proyecto 1" : "Project 1"}
+          </div>
+          <div className="card">
+            {lang === "es" ? "Proyecto 2" : "Project 2"}
+          </div>
+          <div className="card">
+            {lang === "es" ? "Proyecto 3" : "Project 3"}
+          </div>
         </div>
       </div>
 

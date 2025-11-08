@@ -73,6 +73,10 @@ body {
 .lang-switch {
   display: grid;
   place-items: center;
+  transition: 0.4s;
+}
+.lang-switch:hover{
+  transform: scale(1.05);
 }
 
 .tabs {
