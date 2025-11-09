@@ -53,8 +53,8 @@ function Body() {
             </h3>
             <p>
               {lang === "es"
-                ? "Gestión de servidores de dominio, administración de NAS, mantenimiento de VPN, servicios en red (DNS, DHCP, TCP/IP), administración de Microsoft 365."
-                : "Domain server management, NAS administration, VPN maintenance, network services (DNS, DHCP, TCP/IP), and Microsoft 365 administration."}
+                ? "Gestión de servidores de dominio, administración de NAS, VPN, servicios en red (DNS, DHCP, TCP/IP), administración de Microsoft 365."
+                : "Domain server management, NAS administration, VPN, network services (DNS, DHCP, TCP/IP), and Microsoft 365 administration."}
             </p>
             <span className="duration">
               {lang === "es"
