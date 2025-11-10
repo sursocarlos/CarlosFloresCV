@@ -32,8 +32,8 @@ function Body() {
           </p>
           <p>
             {lang === "es"
-              ? "Mi objetivo: seguir creciendo y aportar valor a cada proyecto con soluciones limpias y eficientes."
-              : "My goal: to keep growing and add value to every project with clean and efficient solutions."}
+              ? "Mi objetivo: seguir creciendo y aportar valor a cada proyecto con soluciones eficientes."
+              : "My goal: to keep growing and add value to every project with efficient solutions."}
           </p>
         </div>
       </div>
@@ -92,7 +92,7 @@ function Body() {
             <div className="company-logo">
               <img src={grupoacercalogo} alt="empresa" />
             </div>
-            <h3>{lang === "es" ? "Soporte IT" : "IT Support"}</h3>
+            <h3>{lang === "es" ? "Asesor Energético" : "Energy Advisor"}</h3>
             <p>
               {lang === "es"
                 ? "Marketing, atención al cliente y telemarketing"
@@ -113,21 +113,38 @@ function Body() {
       <div className="container projects" id="proyectos">
         <h2>{lang === "es" ? "Proyectos" : "Projects"}</h2>
         <div className="cards">
-          <div className="card">
-            {lang === "es" ? "Proyecto 1" : "Project 1"}
-          </div>
-          <div className="card">
-            {lang === "es" ? "Proyecto 2" : "Project 2"}
-          </div>
-          <div className="card">
-            {lang === "es" ? "Proyecto 3" : "Project 3"}
-          </div>
+          <a
+            href="https://github.com/sursocarlos/Empresa"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card"
+          >
+            {lang === "es" ? "Empresa" : "Company"}
+          </a>
+
+          <a
+            href="https://github.com/sursocarlos/GeoVibes"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card"
+          >
+            {lang === "es" ? "GeoVibes" : "GeoVibes"}
+          </a>
+
+          <a
+            href="https://github.com/sursocarlos/CarlosFloresCV"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card"
+          >
+            {lang === "es" ? "Portafolios personal" : "Personal portfolio"}
+          </a>
         </div>
       </div>
 
       <div className="container contact" id="contacto">
         <h2>{lang === "es" ? "Contacto" : "Contact"}</h2>
-        <p>📩 carlitosklein@example.com</p>
+        <p>📩 sursocarlos@gmail.com</p>
       </div>
     </section>
   );
