@@ -213,7 +213,7 @@
 #habilidades,
 #proyectos,
 #contacto {
-  scroll-margin-top: 100px; /* ajusta al alto de tu header */
+  scroll-margin-top: 100px;
 }
 
 /* ===== HABILIDADES VERTICALES REHECHAS ===== */
@@ -247,7 +247,9 @@
 .skill-name {
   width: 120px;
   font-weight: 600;
+  /*
   color: #00ffff;
+  */
   flex-shrink: 0;
   text-align: left;
 }
@@ -255,7 +257,7 @@
 /* Barra de progreso */
 .skill-bar {
   flex-grow: 1;
-  height: 17px;
+  height: 19px;
   background: rgba(0, 255, 255, 0.1);
   border-radius: 8px;
   overflow: hidden;

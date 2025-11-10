@@ -38,7 +38,7 @@ function Body() {
         </div>
       </div>
 
-      {/* Experiencia */}
+      {/* ===== Experiencia ===== */}
       <div className="container experience" id="experiencia">
         <h2>{lang === "es" ? "Experiencia" : "Experience"}</h2>
         <div className="experience-list">
@@ -121,7 +121,7 @@ function Body() {
             { name: "CSS", level: 60 },
             { name: "SQL", level: 50 },
             { name: "React", level: 55 },
-            { name: "Salesforce", level: 45 },
+            { name: "Salesforce", level: 40 },
           ].map((skill) => (
             <div className="skill-row" key={skill.name}>
               <span className="skill-name">{skill.name}</span>
@@ -136,7 +136,7 @@ function Body() {
         </div>
       </div>
 
-      {/* Proyectos */}
+      {/* ===== PROYECTOS ===== */}
       <div className="container projects" id="proyectos">
         <h2>{lang === "es" ? "Proyectos" : "Projects"}</h2>
         <div className="cards">
