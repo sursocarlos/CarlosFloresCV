@@ -12,12 +12,14 @@ function Header() {
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
-
+        
         <nav>
-          <a href="#inicio">{lang === "es" ? "Inicio" : "Home"}</a>
-          <a href="#sobre-mi">{lang === "es" ? "Sobre mí" : "About Me"}</a>
-          <a href="#experiencia">{lang === "es" ? "Habilidades" : "Skills"}</a>
-          <a href="#certificaciones">{lang === "es" ? "Certificaciones" : "Certifications"}</a>
+          <a href="#sobre-mi">{lang === "es" ? "Inicio" : "Home"}</a>
+          <a href="#experiencia">{lang === "es" ? "Experiencia" : "Experience"}</a>
+          <a href="#habilidades">{lang === "es" ? "Habilidades" : "Skills"}</a>
+          <a href="#certificaciones">
+            {lang === "es" ? "Certificaciones" : "Certifications"}
+          </a>
           <a href="#contacto">{lang === "es" ? "Contacto" : "Contact"}</a>
         </nav>
 

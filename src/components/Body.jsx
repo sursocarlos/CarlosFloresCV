@@ -10,8 +10,8 @@ function Body() {
   const { lang } = useContext(LanguageContext);
 
   return (
-    <section className="Body">
-      <div className="containerReal" id="sobre-mi">
+    <section className="Body" id="sobre-mi">
+      <div className="containerReal">
         <img src={carlos} alt="carlos" />
         <div className="sobreMi">
           <h2>{lang === "es" ? "Sobre mí" : "About Me"}</h2>
@@ -110,6 +110,33 @@ function Body() {
         </div>
       </div>
 
+      {/* ===== HABILIDADES ===== */}
+      <div className="container skills" id="habilidades">
+        <h2>{lang === "es" ? "Habilidades" : "Skills"}</h2>
+        <div className="skills-list">
+          {[
+            { name: "Java", level: 70 },
+            { name: "JavaScript", level: 60 },
+            { name: "HTML", level: 65 },
+            { name: "CSS", level: 60 },
+            { name: "SQL", level: 50 },
+            { name: "React", level: 55 },
+            { name: "Salesforce", level: 45 },
+          ].map((skill) => (
+            <div className="skill-row" key={skill.name}>
+              <span className="skill-name">{skill.name}</span>
+              <div className="skill-bar">
+                <div
+                  className="skill-fill"
+                  style={{ width: `${skill.level}%` }}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Proyectos */}
       <div className="container projects" id="proyectos">
         <h2>{lang === "es" ? "Proyectos" : "Projects"}</h2>
         <div className="cards">
