@@ -135,7 +135,7 @@ function Body() {
           ))}
         </div>
       </div>
-
+      
       {/* ===== PROYECTOS ===== */}
       <div className="container projects" id="proyectos">
         <h2>{lang === "es" ? "Proyectos" : "Projects"}</h2>

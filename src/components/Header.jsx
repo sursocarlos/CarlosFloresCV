@@ -6,13 +6,11 @@ import { LanguageContext } from "../context/LanguageContext";
 function Header() {
   const { lang, toggleLang } = useContext(LanguageContext);
 
-  // Pruebas cambios random (Eliminar)
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuToggle = () => setMenuOpen(!menuOpen);
 
   const handleLinkClick = () => setMenuOpen(false);
-  // Pruebas cambios random (Eliminar)
 
   return (
     <div>
@@ -65,7 +63,6 @@ function Header() {
       </div>
 
       <div>
-        {/* Menú móvil separado del header */}
         <nav className={`mobile-menu ${menuOpen ? "active" : ""}`}>
           <a href="#sobre-mi" onClick={handleLinkClick}>
             {lang === "es" ? "Sobre mí" : "About Me"}
@@ -83,7 +80,6 @@ function Header() {
             {lang === "es" ? "Contacto" : "Contact"}
           </a>
         </nav>
-        {/* Menú móvil separado del header */}
         
         <button
           className={`menu-toggle ${menuOpen ? "open" : ""}`}
