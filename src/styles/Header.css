@@ -12,7 +12,7 @@ body {
   position: fixed;
   top: 20px;
   left: 50%;
-  transform: translateX(-50%);  
+  transform: translateX(-50%);
   width: 96%;
   z-index: 1000;
 }
@@ -37,7 +37,7 @@ body {
   filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.3));
 }
 
-.header nav {
+.desktop-nav {
   display: flex;
   gap: 1.8em;
 }
@@ -74,8 +74,10 @@ body {
   display: grid;
   place-items: center;
   transition: 0.4s;
+  
 }
-.lang-switch:hover{
+
+.lang-switch:hover {
   transform: scale(1.05);
 }
 
@@ -112,97 +114,132 @@ body {
     gap: 15px;
     padding: 15px 20px;
   }
-
-  .header nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
 }
 
-/* ===== CAMBIOS RANDOM ===== */
-/* MENU TOGGLE */
 
-/*
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1100;
-}
-*/
-
-
-.menu-toggle {
-  /*
+/* ===== MENÚ MÓVIL ===== */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100vw; /* oculto por defecto */
+  width: 40vw;
+  height: 100vh;
+  background: rgba(20, 22, 30, 0.97);
+  border-left: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: -2px 0 15px rgba(0, 255, 255, 0.2);
   display: flex;
-  */
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2.5rem;
+  gap: 1.5rem;
+  transition: right 0.4s ease;
+  backdrop-filter: blur(8px);
+  z-index: 9998;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  width: 100%;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: #00ffff;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+/* ===== BOTÓN HAMBURGUESA ===== */
+.menu-toggle {
   display: none;
   flex-direction: column;
   gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1100;
 
-  position: absolute; /* o fixed si quieres que se quede al hacer scroll */
-  top: 20px;          /* distancia desde arriba */
-  right: 20px;        /* distancia desde la derecha */
-  width: 40px;         /* ajustar tamaño */
-  height: 40px;        /* ajustar tamaño */
+  position: fixed; /* Siempre visible aunque se haga scroll */
+  top: 40px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+
+  z-index: 10000; /* Por encima del menú lateral */
+  transition: transform 0.3s ease;
 }
 
+/* Efecto de hover */
+.menu-toggle:hover {
+  transform: scale(1.05);
+}
 
+/* Líneas del icono */
 .menu-toggle span {
-  width: 25px;
+  width: 28px;
   height: 3px;
   background: #00ffff;
   border-radius: 4px;
   transition: all 0.3s ease;
 }
 
+/* Estado abierto: animación tipo X */
 .menu-toggle.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
+
 .menu-toggle.open span:nth-child(2) {
   opacity: 0;
 }
+
 .menu-toggle.open span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* RESPONSIVE */
-
+/* Mostrar el botón solo en móviles */
 @media (max-width: 1000px) {
   .menu-toggle {
     display: flex;
   }
-  .header nav {
-  position: fixed;
-  top: 0;
-  right: -300px; 
-  width: 220px;
-  height: 100vh;
-  background: rgba(20, 22, 30, 0.95);
-  transition: right 0.3s ease;
+}
+
+/* Ocultar menú de escritorio en pantallas pequeñas */
+@media (max-width: 1000px) {
+  .desktop-nav {
+    display: none;
+  }
+}
+
+/* Menú de escritorio */
+.desktop-nav {
   display: flex;
-  flex-direction: column;
-  padding-left: 20px;
-  margin: 0;
-  border: 1px solid black;
-  border-left: 1px solid rgba(0, 255, 255, 0.2);
-  box-sizing: border-box;
-  gap: 1.2rem;
+  gap: 1.8em;
 }
 
-.header nav.active {
-  right: 0; 
+/* Media query que coincide con el botón hamburguesa */
+@media (max-width: 1000px) {
+  .desktop-nav {
+    display: none !important; /* fuerza ocultar */
+  }
+
+  .menu-toggle {
+    display: flex !important; /* fuerza mostrar */
+  }
+
+  .lang-switch {
+    margin-right: 40px; /* para pantallas muy pequeñas */
+  }
+
 }
 
-}  
+@media (max-width: 768px) {
+  .lang-switch {
+    margin-right: 0px; /* para pantallas muy pequeñas */
+  }
 
-
-
+}
