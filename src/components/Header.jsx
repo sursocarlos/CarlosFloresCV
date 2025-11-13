@@ -29,7 +29,7 @@ function Header() {
             <a href="#habilidades">
               {lang === "es" ? "Habilidades" : "Skills"}
             </a>
-            <a href="#certificaciones">
+            <a href="#proyectos">
               {lang === "es" ? "Proyectos" : "Projects"}
             </a>
             <a href="#contacto">{lang === "es" ? "Contacto" : "Contact"}</a>

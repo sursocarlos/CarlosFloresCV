@@ -207,14 +207,6 @@
   font-weight: 600;
 }
 
-/*Espacio entre el header y el elmento al hacer click sobre el menu*/
-#sobre-mi,
-#experiencia,
-#habilidades,
-#proyectos,
-#contacto {
-  scroll-margin-top: 100px;
-}
 
 /* ===== HABILIDADES VERTICALES REHECHAS ===== */
 .skills {
@@ -366,4 +358,14 @@
   .cards .card:nth-child(3) {
     grid-column: auto;
   }
+}
+
+
+/*Espacio entre el header y el elmento al hacer click sobre el menu*/
+#sobre-mi,
+#experiencia,
+#habilidades,
+#proyectos,
+#contacto {
+  scroll-margin-top: 100px;
 }
