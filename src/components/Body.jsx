@@ -12,7 +12,7 @@ function Body() {
   return (
     <section className="Body" id="sobre-mi">
       <div className="containerReal">
-        <img src={carlos} alt="carlos" />
+        <img src={carlos} alt="carlos"/>
         <div className="sobreMi">
           <h2>{lang === "es" ? "Sobre mí" : "About Me"}</h2>
           <p>
@@ -44,7 +44,7 @@ function Body() {
         <div className="experience-list">
           <div className="experience-item">
             <div className="company-logo">
-              <img src={ug21logo} alt="empresa" />
+              <img src={ug21logo} alt="empresa"/>
             </div>
             <h3>
               {lang === "es"
@@ -110,6 +110,86 @@ function Body() {
         </div>
       </div>
 
+      <div className="education-section" id="educacion">
+        <h2>{lang === "es" ? "Educación" : "Education"}</h2>
+
+        <div className="education-list">
+          <div className="edu-card">
+            <h3>
+              {lang === "es"
+                ? "Ciclo Formativo Grado Superior Desarrollo Aplicaciones Web (DAW)"
+                : "Higher Vocational Training in Web Application Development (DAW)"}
+            </h3>
+
+            <p className="edu-center">
+              {lang === "es"
+                ? "I.E.S Sotero Hernández (Sevilla)"
+                : "I.E.S Sotero Hernández (Seville)"}
+            </p>
+
+            <p className="edu-date">2024 – 2026</p>
+          </div>
+
+          <div className="edu-card">
+            <h3>
+              {lang === "es"
+                ? "Ciclo Formativo Grado Medio Sistemas Microinformáticos y Redes (SMR)"
+                : "Intermediate Vocational Training in Microcomputer Systems & Networks (SMR)"}
+            </h3>
+
+            <p className="edu-center">
+              {lang === "es"
+                ? "I.E.S Sotero Hernández (Sevilla)"
+                : "I.E.S Sotero Hernández (Seville)"}
+            </p>
+
+            <p className="edu-date">2022 – 2024</p>
+          </div>
+
+          <div className="edu-card">
+            <h3>
+              {lang === "es"
+                ? "Certificación CISCO JavaScript Essentials 1 (JSE)"
+                : "CISCO Certification: JavaScript Essentials 1 (JSE)"}
+            </h3>
+
+            <p className="edu-center">CISCO Systems</p>
+
+            <p className="edu-date">
+              {lang === "es" ? "5 de febrero de 2024" : "05 Feb 2024"}
+            </p>
+          </div>
+
+          <div className="edu-card">
+            <h3>
+              {lang === "es"
+                ? "Certificación CISCO Cybersecurity Essentials"
+                : "CISCO Certification: Cybersecurity Essentials"}
+            </h3>
+
+            <p className="edu-center">CISCO Systems</p>
+
+            <p className="edu-date">
+              {lang === "es" ? "22 de enero de 2024" : "22 Jan 2024"}
+            </p>
+          </div>
+
+          <div className="edu-card">
+            <h3>
+              {lang === "es"
+                ? "Certificación CISCO CCNAv7: Introducción a Redes"
+                : "CISCO Certification: CCNAv7 - Introduction to Networks"}
+            </h3>
+
+            <p className="edu-center">CISCO Systems</p>
+
+            <p className="edu-date">
+              {lang === "es" ? "15 de junio de 2023" : "15 Jun 2023"}
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* ===== HABILIDADES ===== */}
       <div className="container skills" id="habilidades">
         <h2>{lang === "es" ? "Habilidades" : "Skills"}</h2>
@@ -135,7 +215,7 @@ function Body() {
           ))}
         </div>
       </div>
-      
+
       {/* ===== PROYECTOS ===== */}
       <div className="container projects" id="proyectos">
         <h2>{lang === "es" ? "Proyectos" : "Projects"}</h2>

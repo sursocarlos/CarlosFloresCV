@@ -17,10 +17,12 @@ function Header() {
       <div className="header-wrapper">
         <header className="header">
           <div className="logo">
-            <img src={logo} alt="logo" />
+            <a href="#sobre-mi">
+            <img src={logo} alt="logo"/>
+            </a>
           </div>
           <nav className="desktop-nav">
-            <a href="#sobre-mi">{lang === "es" ? "Inicio" : "Home"}</a>
+            <a href="#sobre-mi">{lang === "es" ? "Sobre mí" : "About Me"}</a>
             <a href="#experiencia">
               {lang === "es" ? "Experiencia" : "Experience"}
             </a>
@@ -28,7 +30,7 @@ function Header() {
               {lang === "es" ? "Habilidades" : "Skills"}
             </a>
             <a href="#certificaciones">
-              {lang === "es" ? "Certificaciones" : "Certifications"}
+              {lang === "es" ? "Proyectos" : "Projects"}
             </a>
             <a href="#contacto">{lang === "es" ? "Contacto" : "Contact"}</a>
           </nav>
