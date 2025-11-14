@@ -26,6 +26,9 @@ function Header() {
             <a href="#experiencia">
               {lang === "es" ? "Experiencia" : "Experience"}
             </a>
+            <a href="#educacion">
+              {lang === "es" ? "Educación" : "Education"}
+            </a>
             <a href="#habilidades">
               {lang === "es" ? "Habilidades" : "Skills"}
             </a>
@@ -71,6 +74,9 @@ function Header() {
           </a>
           <a href="#experiencia" onClick={handleLinkClick}>
             {lang === "es" ? "Experiencia" : "Experience"}
+          </a>
+          <a href="#educacion" onClick={handleLinkClick}>
+            {lang === "es" ? "Educación" : "Education"}
           </a>
           <a href="#habilidades" onClick={handleLinkClick}>
             {lang === "es" ? "Habilidades" : "Skills"}

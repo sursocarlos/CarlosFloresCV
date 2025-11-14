@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import "../styles/Footer.css";
-import { LanguageContext } from "../context/LanguageContext";
 import Github from "../assets/github.png";
 import LinkedIn from "../assets/linkedIn.png";
 

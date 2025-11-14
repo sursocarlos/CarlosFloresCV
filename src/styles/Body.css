@@ -664,6 +664,7 @@
 /*Espacio entre el header y el elmento al hacer click sobre el menu*/
 #sobre-mi,
 #proyectos,
+#educacion,
 #contacto {
   scroll-margin-top: 100px;
 }

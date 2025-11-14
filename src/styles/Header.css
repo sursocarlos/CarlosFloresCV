@@ -224,7 +224,7 @@ body {
 }
 
 /* Media query que coincide con el botón hamburguesa */
-@media (max-width: 1000px) {
+@media (max-width: 1090px) {
   .desktop-nav {
     display: none !important; /* fuerza ocultar */
   }
