@@ -287,7 +287,7 @@ function Body() {
             <input
               type="tel"
               required
-              placeholder={lang === "es" ? "Tu email" : "Your email"}
+              placeholder={lang === "es" ? "Tu número de teléfono" : "Your phone number"}
             />
           </div>
 
