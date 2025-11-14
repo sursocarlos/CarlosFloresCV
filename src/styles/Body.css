@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 40px;
+  padding: 30px 20px;
   gap: 40px;
   flex-wrap: wrap;
 }
@@ -39,7 +39,7 @@
 }
 
 .sobreMi h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #00ffff;
   margin-bottom: 1rem;
 }
@@ -59,6 +59,7 @@
 .projects h2 {
   color: #00ffff;
   margin-bottom: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .cards {
@@ -109,13 +110,14 @@
 
 /* ===== EXPERIENCIA ===== */
 .experience {
-  padding: 80px 20px;
+  padding: 5px 20px;
   text-align: center;
 }
 
 .experience h2 {
   color: #00ffff;
   margin-bottom: 2rem;
+  font-size: 1.8rem;
 }
 
 .experience-list {
@@ -209,13 +211,14 @@
 
 /* ===== HABILIDADES VERTICALES REHECHAS ===== */
 .skills {
-  padding: 80px 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 
 .skills h2 {
   color: #00ffff;
   margin-bottom: 2rem;
+  font-size: 1.8rem;
 }
 
 .skills-list {
@@ -281,14 +284,14 @@
 /* ========================= */
 
 .education-section {
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .education-section h2 {
   color: #00ffff;
   margin-bottom: 2.5rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .education-list {
@@ -365,7 +368,7 @@
 /* ========================= */
 
 .contact-section {
-  padding: 80px 20px;
+  padding: 20px 20px;
   text-align: center;
 }
 
@@ -373,6 +376,7 @@
   color: #00ffff;
   margin-bottom: 2rem;
   font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 /* FORMULARIO */
@@ -386,7 +390,7 @@
 
 /* Labels encima */
 .contact-form label {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #00ffff;
   font-weight: 600;
   margin-bottom: 6px;
@@ -490,6 +494,7 @@
   .contact-form .field button {
     margin-left: 14px;
   }
+
 }
 
 @media (max-width: 480px) {
@@ -538,16 +543,6 @@
     margin-right: 30px;
   }
 }
-
-/*Espacio entre el header y el elmento al hacer click sobre el menu*/
-#sobre-mi,
-#experiencia,
-#habilidades,
-#proyectos,
-#contacto {
-  scroll-margin-top: 100px;
-}
-
 
 /* ===== CV BUTTON ===== */
 .cv-section {
@@ -654,7 +649,7 @@
   display: flex;
   align-items: flex-start; /* para que la imagen y el texto arranquen arriba */
   justify-content: center;
-  padding: 60px 40px;
+  padding: 40px 20px;
   gap: 40px;
   flex-wrap: wrap;
 }
@@ -663,4 +658,19 @@
   display: flex;
   flex-direction: column; /* columna: imagen arriba, botón abajo */
   align-items: center;
+}
+
+/*Espacio entre el header y el elmento al hacer click sobre el menu*/
+#sobre-mi,
+#proyectos,
+#contacto {
+  scroll-margin-top: 100px;
+}
+
+#experiencia{
+  scroll-margin-top: 140px;
+}
+
+#habilidades{
+  scroll-margin-top: 120px;
 }
