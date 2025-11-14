@@ -38,7 +38,7 @@ function Body() {
         </div>
       </div>
 
-      {/* ===== Experiencia ===== */}
+      {/* ===== EXPERIENCIA ===== */}
       <div className="container experience" id="experiencia">
         <h2>{lang === "es" ? "Experiencia" : "Experience"}</h2>
         <div className="experience-list">
@@ -109,7 +109,8 @@ function Body() {
           </div>
         </div>
       </div>
-
+      
+      {/* ===== EDUCACIÓN ===== */}
       <div className="education-section" id="educacion">
         <h2>{lang === "es" ? "Educación" : "Education"}</h2>
 
@@ -248,12 +249,8 @@ function Body() {
           </a>
         </div>
       </div>
-      {/*
-      <div className="container contact" id="contacto">
-        <h2>{lang === "es" ? "Contacto" : "Contact"}</h2>
-        <p>📩 sursocarlos@gmail.com</p>
-      </div>
-      */}
+
+      {/* ===== CONTACTO ===== */}
       <div className="contact-section" id="contacto">
         <h2>{lang === "es" ? "Contacto" : "Contact"}</h2>
 
