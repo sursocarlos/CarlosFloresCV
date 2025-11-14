@@ -207,7 +207,6 @@
   font-weight: 600;
 }
 
-
 /* ===== HABILIDADES VERTICALES REHECHAS ===== */
 .skills {
   padding: 80px 20px;
@@ -360,6 +359,178 @@
   }
 }
 
+/* FORMULARIO DE CONTACTO */
+/* ========================= */
+/*         CONTACTO          */
+/* ========================= */
+
+.contact-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: #00ffff;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* FORMULARIO */
+.contact-form {
+  max-width: 700px; /* MÁS ANCHO */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 26px; /* más separación */
+}
+
+/* Labels encima */
+.contact-form label {
+  font-size: 1rem;
+  color: #00ffff;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  text-align: left;
+}
+
+/* Inputs largos y centrados */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid rgba(0, 255, 255, 0.35);
+  padding: 14px;
+  border-radius: 10px;
+  color: #d6d6d6;
+  font-size: 1rem;
+  transition: 0.25s ease;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.15);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Hover / focus */
+.contact-form input:hover,
+.contact-form textarea:hover,
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 14px rgba(0, 255, 255, 0.45);
+  outline: none;
+}
+
+/* BOTÓN */
+.contact-form button {
+  background: #00b3b3;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: black;
+  cursor: pointer;
+  transition: 0.25s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contact-form button:hover {
+  background: #00ffff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.45);
+}
+
+.contact-form .field {
+  width: 100%;
+}
+
+.contact-form .field button {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  margin-left: 18px;
+}
+
+/* Contenedor del botón */
+
+@media (max-width: 768px) {
+  .contact-section {
+    max-width: 100%;
+    margin-right: 13px;
+  }
+
+  .contact-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .contact-form {
+    max-width: 100%;
+    padding: 0 20px; /* sigue manteniendo margen simétrico */
+  }
+
+  .contact-form label {
+    font-size: 0.95rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+    padding: 14px;
+  }
+
+  .contact-form .field button {
+    margin-left: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form label {
+    font-size: 0.9rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .contact-form textarea {
+    min-height: 100px;
+  }
+
+  .contact-form button {
+    padding: 12px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+
+  .contact-form .field button {
+    margin-left: 12px;
+  }
+
+
+}
+
+@media (max-width: 837px) {
+  .contact-section {
+    max-width: 100%;
+    margin-right: 13px;
+  }
+}
 
 /*Espacio entre el header y el elmento al hacer click sobre el menu*/
 #sobre-mi,
