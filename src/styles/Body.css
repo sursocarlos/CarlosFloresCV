@@ -547,3 +547,80 @@
 #contacto {
   scroll-margin-top: 100px;
 }
+
+
+/* ===== CV BUTTON ===== */
+.cv-section {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.cv-button {
+  background: #00b3b3;
+  border: none;
+  padding: 16px 28px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: black;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.cv-button:hover {
+  background: #00ffff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.45);
+}
+
+/* ===== CV MODAL ===== */
+.cv-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.cv-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  height: 80%;
+  background: #12161d;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0,255,255,0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cv-modal-content iframe {
+  width: 100%;
+  height: calc(100% - 60px); /* espacio para el botón */
+  border: none;
+}
+
+.cv-close-bottom {
+  display: block;
+  margin: 10px auto;
+  padding: 12px 25px;
+  background: #00b3b3;
+  color: black;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.cv-close-bottom:hover {
+  background: #00ffff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.45);
+}

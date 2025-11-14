@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "../styles/Body.css";
 import carlos from "../assets/carlos.png";
 import ug21logo from "../assets/ug21logo.png";
@@ -8,6 +8,8 @@ import { LanguageContext } from "../context/LanguageContext";
 
 function Body() {
   const { lang } = useContext(LanguageContext);
+
+  const [cvOpen, setCvOpen] = React.useState(false);
 
   return (
     <section className="Body" id="sobre-mi">
@@ -109,7 +111,7 @@ function Body() {
           </div>
         </div>
       </div>
-      
+
       {/* ===== EDUCACIÓN ===== */}
       <div className="education-section" id="educacion">
         <h2>{lang === "es" ? "Educación" : "Education"}</h2>
@@ -284,7 +286,9 @@ function Body() {
             <input
               type="tel"
               required
-              placeholder={lang === "es" ? "Tu número de teléfono" : "Your phone number"}
+              placeholder={
+                lang === "es" ? "Tu número de teléfono" : "Your phone number"
+              }
             />
           </div>
 
@@ -300,9 +304,34 @@ function Body() {
             ></textarea>
           </div>
           <div className="field">
-          <button type="submit">{lang === "es" ? "Enviar" : "Send"}</button>
+            <button type="submit">{lang === "es" ? "Enviar" : "Send"}</button>
           </div>
         </form>
+      </div>
+
+      {/* ===== CV MODAL ===== */}
+      <div className="cv-section">
+        <button className="cv-button" onClick={() => setCvOpen(true)}>
+          {lang === "es" ? "Ver CV" : "View CV"}
+        </button>
+
+        {cvOpen && (
+          <div className="cv-modal">
+            <div className="cv-modal-content">
+              <iframe
+                src="/CARLOSFLORES.pdf"
+                title="CV"
+                frameBorder="0"
+              ></iframe>
+              <button
+                className="cv-close-bottom"
+                onClick={() => setCvOpen(false)}
+              >
+                {lang === "es" ? "Cerrar" : "Close"}
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
