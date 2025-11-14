@@ -308,7 +308,7 @@ function Body() {
           </div>
 
           <div>
-            <label>{lang === "es" ? "Numero" : "Number"}</label>
+            <label>{lang === "es" ? "Número" : "Number"}</label>
             <input
               type="tel"
               required

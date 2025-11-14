@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import "../styles/Footer.css";
 import { LanguageContext } from "../context/LanguageContext";
+import Github from "../assets/github.png";
+import LinkedIn from "../assets/linkedIn.png";
 
 
 function Footer() {
@@ -9,32 +11,28 @@ function Footer() {
       <div className="footer-icons">
 
         <a
-          href="https://www.linkedin.com/in/tu-usuario"
+          href="https://www.linkedin.com/in/carlos-flores-hern%C3%A1ndez-0a63862b1/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <img
-            src="/icons/linkedin.png"
+            src={LinkedIn}
             alt="LinkedIn"
-            className="footer-icon"
+            className="linkedIn"
           />
         </a>
-
         <a
-          href="https://github.com/tu-usuario"
+          href="https://github.com/sursocarlos"
           target="_blank"
           rel="noopener noreferrer"
         >
           <img
-            src="/icons/github.png"
+            src={Github}
             alt="GitHub"
-            className="footer-icon"
+            className="github"
           />
         </a>
-
       </div>
-
-      <p className="footer-text">© {new Date().getFullYear()} CarlitosKlein</p>
     </footer>
   );
 }
