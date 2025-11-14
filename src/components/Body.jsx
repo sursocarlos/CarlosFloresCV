@@ -14,7 +14,33 @@ function Body() {
   return (
     <section className="Body" id="sobre-mi">
       <div className="containerReal">
-        <img src={carlos} alt="carlos" />
+        <div className="left-side">
+          <img src={carlos} alt="carlos" />
+          <div className="cv-section">
+            <button className="cv-button" onClick={() => setCvOpen(true)}>
+              {lang === "es" ? "Ver CV" : "View CV"}
+            </button>
+            {cvOpen && (
+              <>
+                <div className="cv-modal">
+                  <div className="cv-modal-content">
+                    <iframe
+                      src="/CARLOSFLORES.pdf"
+                      title="CV"
+                      frameBorder="0"
+                    ></iframe>
+                  </div>
+                </div>
+                <button
+                  className="cv-close-floating"
+                  onClick={() => setCvOpen(false)}
+                >
+                  {lang === "es" ? "Cerrar" : "Close"}
+                </button>
+              </>
+            )}
+          </div>
+        </div>
         <div className="sobreMi">
           <h2>{lang === "es" ? "Sobre mí" : "About Me"}</h2>
           <p>
@@ -307,32 +333,6 @@ function Body() {
             <button type="submit">{lang === "es" ? "Enviar" : "Send"}</button>
           </div>
         </form>
-      </div>
-
-      <div className="cv-section">
-        <button className="cv-button" onClick={() => setCvOpen(true)}>
-          {lang === "es" ? "Ver CV" : "View CV"}
-        </button>
-
-        {cvOpen && (
-          <>
-            <div className="cv-modal">
-              <div className="cv-modal-content">
-                <iframe
-                  src="/CARLOSFLORES.pdf"
-                  title="CV"
-                  frameBorder="0"
-                ></iframe>
-              </div>
-            </div>
-            <button
-              className="cv-close-floating"
-              onClick={() => setCvOpen(false)}
-            >
-              {lang === "es" ? "Cerrar" : "Close"}
-            </button>
-          </>
-        )}
       </div>
     </section>
   );

@@ -19,7 +19,7 @@
 }
 
 .containerReal img {
-  height: 300px;
+  height: 280px;
   width: auto;
   border-radius: 100%;
   border: 3px solid rgba(0, 255, 255, 0.3);
@@ -552,7 +552,7 @@
 /* ===== CV BUTTON ===== */
 .cv-section {
   text-align: center;
-  margin: 50px 0;
+  margin: 25px 0;
 }
 
 .cv-button {
@@ -648,4 +648,19 @@
   background: #00ffff;
   transform: translateX(-50%) translateY(-3px);
   box-shadow: 0 0 18px rgba(0, 255, 255, 0.45);
+}
+
+.containerReal {
+  display: flex;
+  align-items: flex-start; /* para que la imagen y el texto arranquen arriba */
+  justify-content: center;
+  padding: 60px 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column; /* columna: imagen arriba, botón abajo */
+  align-items: center;
 }
