@@ -602,7 +602,7 @@
 
 .cv-modal-content iframe {
   width: 100%;
-  height: calc(100% - 60px); /* espacio para el botón */
+   height: 100%; 
   border: none;
 }
 
@@ -622,5 +622,30 @@
 .cv-close-bottom:hover {
   background: #00ffff;
   transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.45);
+}
+
+
+/*ha*/
+/* ===== CV BOTÓN FLOTANTE ===== */
+.cv-close-floating {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  padding: 12px 25px;
+  background: #00b3b3;
+  color: black;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 2100;
+  transition: 0.25s ease;
+}
+
+.cv-close-floating:hover {
+  background: #00ffff;
+  transform: translateX(-50%) translateY(-3px);
   box-shadow: 0 0 18px rgba(0, 255, 255, 0.45);
 }

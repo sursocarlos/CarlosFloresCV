@@ -309,28 +309,29 @@ function Body() {
         </form>
       </div>
 
-      {/* ===== CV MODAL ===== */}
       <div className="cv-section">
         <button className="cv-button" onClick={() => setCvOpen(true)}>
           {lang === "es" ? "Ver CV" : "View CV"}
         </button>
 
         {cvOpen && (
-          <div className="cv-modal">
-            <div className="cv-modal-content">
-              <iframe
-                src="/CARLOSFLORES.pdf"
-                title="CV"
-                frameBorder="0"
-              ></iframe>
-              <button
-                className="cv-close-bottom"
-                onClick={() => setCvOpen(false)}
-              >
-                {lang === "es" ? "Cerrar" : "Close"}
-              </button>
+          <>
+            <div className="cv-modal">
+              <div className="cv-modal-content">
+                <iframe
+                  src="/CARLOSFLORES.pdf"
+                  title="CV"
+                  frameBorder="0"
+                ></iframe>
+              </div>
             </div>
-          </div>
+            <button
+              className="cv-close-floating"
+              onClick={() => setCvOpen(false)}
+            >
+              {lang === "es" ? "Cerrar" : "Close"}
+            </button>
+          </>
         )}
       </div>
     </section>
