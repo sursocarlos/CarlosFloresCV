@@ -1,0 +1,36 @@
+.footer {
+  width: 100%;
+  padding: 30px 0;
+  background: #0b0f14;
+  border-top: 1px solid rgba(0, 255, 255, 0.15);
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+.footer-icon {
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: 0.3s;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.2));
+}
+
+.footer-icon:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+  filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.5));
+}
+
+.footer-text {
+  color: #cccccc;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
