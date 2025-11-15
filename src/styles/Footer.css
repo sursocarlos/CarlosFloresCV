@@ -71,6 +71,17 @@
   }
 }
 
+@media (max-width: 320px) {
+  .github {
+    height: 30px;
+  }
+  .linkedIn {
+    height: 30px;
+  }
+}
+
+
+
 .linkedIn:hover {
   opacity: 1;
   transform: translateY(-4px);

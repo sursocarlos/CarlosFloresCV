@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Body from "./components/Body";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { LanguageProvider } from "./context/LanguageContext";
 
@@ -10,6 +11,7 @@ function App() {
     <LanguageProvider>
         <Header />
         <Body />
+        <Contact />
         <Footer />
     </LanguageProvider>
   );

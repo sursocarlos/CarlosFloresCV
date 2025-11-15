@@ -277,63 +277,6 @@ function Body() {
           </a>
         </div>
       </div>
-
-      {/* ===== CONTACTO ===== */}
-      <div className="contact-section" id="contacto">
-        <h2>{lang === "es" ? "Contacto" : "Contact"}</h2>
-
-        <form
-          className="contact-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert(lang === "es" ? "Formulario enviado" : "Message sent");
-          }}
-        >
-          <div>
-            <label>{lang === "es" ? "Nombre" : "Name"}</label>
-            <input
-              type="text"
-              required
-              placeholder={lang === "es" ? "Tu nombre" : "Your name"}
-            />
-          </div>
-
-          <div>
-            <label>{lang === "es" ? "Correo electrónico" : "Email"}</label>
-            <input
-              type="email"
-              required
-              placeholder={lang === "es" ? "Tu email" : "Your email"}
-            />
-          </div>
-
-          <div>
-            <label>{lang === "es" ? "Número" : "Number"}</label>
-            <input
-              type="tel"
-              required
-              placeholder={
-                lang === "es" ? "Tu número de teléfono" : "Your phone number"
-              }
-            />
-          </div>
-
-          <div>
-            <label>{lang === "es" ? "Mensaje" : "Message"}</label>
-            <textarea
-              required
-              placeholder={
-                lang === "es"
-                  ? "Escribe tu mensaje..."
-                  : "Write your message..."
-              }
-            ></textarea>
-          </div>
-          <div className="field">
-            <button type="submit">{lang === "es" ? "Enviar" : "Send"}</button>
-          </div>
-        </form>
-      </div>
     </section>
   );
 }
