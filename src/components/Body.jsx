@@ -45,13 +45,13 @@ function Body() {
           <h2>{lang === "es" ? "Sobre mí" : "About Me"}</h2>
           <p>
             {lang === "es"
-              ? "Desarrollador Web con experiencia en Administración de Sistemas y Redes, apasionado por la tecnología y en constante aprendizaje."
-              : "Web Developer with experience in Systems and Networks administration, passionate about technology and constantly learning."}
+              ? "Desarrollador web con experiencia en administración de sistemas y redes, apasionado por la tecnología y en constante aprendizaje."
+              : "Web developer with experience in systems and networks administration, passionate about technology and constantly learning."}
           </p>
           <p>
             {lang === "es"
-              ? "He trabajado con tecnologías como Java, JavaScript, HTML, CSS, SQL, React y Salesforce, tanto en backend como frontend."
-              : "I have worked with technologies such as Java, JavaScript, HTML, CSS, SQL, React, and Salesforce, both in backend and frontend."}
+              ? "Actualmente tengo 20 años, y a lo largo de mi formación, he trabajado con tecnologías como Java, JavaScript, HTML, CSS, SQL, React, Spring y Salesforce, entre otras."
+              : "I am currently 20 years old, and throughout my training, I have worked with technologies such as Java, JavaScript, HTML, CSS, SQL, React, Spring, and Salesforce, among others."}
           </p>
           <p>
             {lang === "es"
@@ -60,8 +60,8 @@ function Body() {
           </p>
           <p>
             {lang === "es"
-              ? "Mi objetivo: seguir creciendo y aportar valor a cada proyecto con soluciones eficientes."
-              : "My goal: to keep growing and add value to every project with efficient solutions."}
+              ? "Mi objetivo es seguir creciendo como profesional dentro del ámbito del desarrollo, aportando valor y compromiso a cada proyecto en el que participo."
+              : "My goal is to continue growing as a professional in the development field, contributing value and commitment to every project I take part in."}
           </p>
         </div>
       </div>
