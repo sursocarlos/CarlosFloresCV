@@ -33,6 +33,8 @@ Estoy emocionado por seguir creando, explorando nuevas herramientas y mejorando 
 
 ## Autor 👤
 
-**Carlos Flores Hernández**  
+**Carlos Flores Hernández**
+
+🔗 [LinkedIn](https://www.linkedin.com/in/carlos-flores-hern%C3%A1ndez-0a63862b1/)  
 
 
