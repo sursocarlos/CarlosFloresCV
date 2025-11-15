@@ -224,13 +224,13 @@ function Body() {
         <h2>{lang === "es" ? "Habilidades" : "Skills"}</h2>
         <div className="skills-list">
           {[
-            { name: "Java", level: 70 },
-            { name: "JavaScript", level: 60 },
-            { name: "HTML", level: 65 },
-            { name: "CSS", level: 60 },
-            { name: "SQL", level: 50 },
-            { name: "React", level: 55 },
-            { name: "Salesforce", level: 40 },
+            { name: "Java", level: 80 },
+            { name: "JavaScript", level: 70 },
+            { name: "HTML", level: 75 },
+            { name: "CSS", level: 70 },
+            { name: "SQL", level: 60 },
+            { name: "React", level: 65 },
+            { name: "Salesforce", level: 50 },
           ].map((skill) => (
             <div className="skill-row" key={skill.name}>
               <span className="skill-name">{skill.name}</span>

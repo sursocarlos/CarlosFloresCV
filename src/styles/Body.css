@@ -580,7 +580,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
+  z-index: 20000;
 }
 
 .cv-modal-content {
@@ -636,7 +636,7 @@
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  z-index: 2100;
+  z-index: 21000;
   transition: 0.25s ease;
 }
 

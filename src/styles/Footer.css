@@ -3,6 +3,7 @@
   padding: 30px 0;
   background: #0b0f14;
   border-top: 1px solid rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
   text-align: center;
   margin-top: 0;
 }
@@ -63,10 +64,10 @@
 /* Móviles pequeños */
 @media (max-width: 480px) {
   .github {
-    height: 40px;
+    height: 35px;
   }
   .linkedIn {
-    height: 40px;
+    height: 35px;
   }
 }
 
