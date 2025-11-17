@@ -48,5 +48,5 @@ Estoy emocionado por seguir creando, explorando nuevas herramientas y mejorando 
 **Carlos Flores Hernández**
 
 🔗 [LinkedIn](https://www.linkedin.com/in/carlos-flores-hern%C3%A1ndez-0a63862b1/)  
-
+🔗 [Web](https://carlos-flores-cv.vercel.app/) 
 
