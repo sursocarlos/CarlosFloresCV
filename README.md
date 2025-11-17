@@ -30,8 +30,8 @@ Este portafolio muestra información sobre mi perfil profesional, experiencia y 
 1. Descargar y descomprimir el archivo `.zip` del proyecto.
 2. Abrir una terminal y acceder a la carpeta del proyecto.
 3. Ejecutar los siguientes comandos:
-   **npm install**
-   **npm run dev**
+- **npm install**
+- **npm run dev**
 4. **Importante:**  
    El proyecto utiliza **EmailJS** para el formulario de contacto.  
    Las credenciales están protegidas mediante variables de entorno (`.env`), por lo que este archivo **no** está incluido en el repositorio por motivos de seguridad.
